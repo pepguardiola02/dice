@@ -1,9 +1,24 @@
 import random
-answer = input("VIll du slå en tärning?")
+import time
+print("""
+   _     _      _     _      _     _      _     _      _     _      _     _      _     _   
+  (c).-.(c)    (c).-.(c)    (c).-.(c)    (c).-.(c)    (c).-.(c)    (c).-.(c)    (c).-.(c)  
+   / ._. \      / ._. \      / ._. \      / ._. \      / ._. \      / ._. \      / ._. \   
+ __\( Y )/__  __\( Y )/__  __\( Y )/__  __\( Y )/__  __\( Y )/__  __\( Y )/__  __\( Y )/__ 
+(_.-/'-'\-._)(_.-/'-'\-._)(_.-/'-'\-._)(_.-/'-'\-._)(_.-/'-'\-._)(_.-/'-'\-._)(_.-/'-'\-._)
+   || W ||      || E ||      || L ||      || C ||      || O ||      || M ||      || E ||   
+ _.' `-' '._  _.' `-' '._  _.' `-' '._  _.' `-' '._  _.' `-' '._  _.' `-' '._  _.' `-' '._ 
+(.-./`-'\.-.)(.-./`-'\.-.)(.-./`-'\.-.)(.-./`-'\.-.)(.-./`-'\.-.)(.-./`-'\.-.)(.-./`-'\.-.)
+ `-'     `-'  `-'     `-'  `-'     `-'  `-'     `-'  `-'     `-'  `-'     `-'  `-'     `-' """)
+
+
+answer = input("Vill du slå en tärning? ")
 result = random.randint(1,6)
+time.sleep(2)
 while answer == "ja":
     result = random.randint(1,6)
     print(result)
-    answer = input("VIll du slå en tärning igen?")
+    answer = input("Vill du slå en tärning igen? ")
+    time.sleep(2)
 else:
     print("ok, ha det bra!")
