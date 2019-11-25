@@ -11,14 +11,22 @@ print("""
 (.-./`-'\.-.)(.-./`-'\.-.)(.-./`-'\.-.)(.-./`-'\.-.)(.-./`-'\.-.)(.-./`-'\.-.)(.-./`-'\.-.)
  `-'     `-'  `-'     `-'  `-'     `-'  `-'     `-'  `-'     `-'  `-'     `-'  `-'     `-' """)
 
+history = []
+
+def average(numbers):
+  return sum(numbers) / len(numbers)
 
 answer = input("Vill du slå en tärning? ")
 result = random.randint(1,6)
-time.sleep(2)
+time.sleep(0)
 while answer == "ja":
     result = random.randint(1,6)
+    history.append(result)
     print(result)
     answer = input("Vill du slå en tärning igen? ")
-    time.sleep(2)
+    time.sleep(0)
 else:
     print("ok, ha det bra!")
+
+print(history)
+print(average(history))
